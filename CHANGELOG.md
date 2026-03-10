@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.0.0 (2026-03-10)
+
+
+### Features
+
+* add base controller ([74d0264](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/74d0264a82abae80819ea52e61e54282f07ffa3c))
+* auth module infraestructure and domian ([a4f9e03](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/a4f9e030bea3de652e4b3319c8fe497401390e77))
+* middleware request log and log level ([381648e](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/381648e0584aae22c3a18f72be62bd9f6481e77f))
+
+
+### Bug Fixes
+
+* add husky and schema prisma ([4053b84](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/4053b8496ab0152ec4e91b69cd7bb63621e0311f))
+* dependencies ([4e77ee3](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/4e77ee382a204acdcd2933cbae90b7f5fdff7e52))
+* format ([a41ffbd](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/a41ffbd6a54c3c4376c0cd86887071c230afea05))
+* test ([97cd90a](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/97cd90a18e01e1664d6d6f991220fcdc3ff045bd))
+
 ## [1.4.0](https://github.com/EduardoJVN/PE-users-backend/compare/v1.3.2...v1.4.0) (2026-03-09)
 
 
