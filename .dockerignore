@@ -4,4 +4,3 @@ dist
 .env
 tests
 Dockerfile
-scripts
