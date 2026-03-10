@@ -9,7 +9,9 @@ export const reportBootstrap = (logger: ILogger) => {
   logger.info(line);
   logger.info(`📦 Versión: ${ENV.VERSION}`);
   logger.info(`🌍 Entorno: ${ENV.NODE_ENV}`);
+  logger.info(`📫 Host: ${ENV.HOST}`);
   logger.info(`🔌 Puerto:  ${ENV.PORT}`);
   logger.info(`🟢 Node:    ${process.version}`);
+  logger.info(`🔗 URL:    http://${ENV.HOST}:${ENV.PORT}`);
   logger.info(line);
 };
