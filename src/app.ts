@@ -37,7 +37,10 @@ async function bootstrap() {
   logger.info('Found', { body: found.body });
 
   logger.info('--- UPDATE ---');
-  await productController.update({ params: { id: 'p-1' }, body: { name: 'Super Widget', price: 19.99 } });
+  await productController.update({
+    params: { id: 'p-1' },
+    body: { name: 'Super Widget', price: 19.99 },
+  });
   const updated = await productController.getById({ params: { id: 'p-1' } });
   logger.info('Updated', { body: updated.body });
 

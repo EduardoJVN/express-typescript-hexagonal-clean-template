@@ -3,7 +3,7 @@ import { ENV } from './env.config.js';
 
 export const reportBootstrap = (logger: ILogger) => {
   const line = '─'.repeat(50);
-  
+
   logger.info(line);
   logger.info(`🚀 ${ENV.APP_NAME.toUpperCase()} INICIADA`);
   logger.info(line);
