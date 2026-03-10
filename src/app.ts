@@ -7,7 +7,7 @@ import { createAppModule } from '@infra/modules/app.module.js';
 import { createServer } from '@infra/entry-points/server.js';
 
 async function bootstrap() {
-  const logger = new Logger();
+  const logger = new Logger(ENV.LOG_LEVEL);
   const errorReporter = new LogErrorReporter(logger);
 
   process.on('uncaughtException', (err) => {
@@ -25,7 +25,7 @@ async function bootstrap() {
 
   const { auth } = await createAppModule();
 
-  const app = createServer(errorReporter, auth.tokenSigner, auth.tokenBlacklist);
+  const app = createServer(logger, errorReporter, auth.tokenSigner, auth.tokenBlacklist);
 
   process.on('SIGTERM', async () => {
     await prisma.$disconnect();

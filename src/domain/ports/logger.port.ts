@@ -3,4 +3,5 @@ export interface ILogger {
   error(message: string, context?: Record<string, unknown>): void;
   warn(message: string, context?: Record<string, unknown>): void;
   debug(message: string, context?: Record<string, unknown>): void;
+  trace(message: string, context?: Record<string, unknown>): void;
 }

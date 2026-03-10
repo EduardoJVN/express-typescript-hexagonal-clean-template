@@ -96,4 +96,36 @@ describe('env.config', () => {
       'Missing required environment variable: FRONTEND_URL',
     );
   });
+
+  it('defaults LOG_LEVEL to "info" when not set', async () => {
+    prodEnv();
+    delete process.env.LOG_LEVEL;
+
+    const { ENV } = await import('@infra/config/env.config.js');
+
+    expect(ENV.LOG_LEVEL).toBe('info');
+  });
+
+  it('accepts all valid LOG_LEVEL values', async () => {
+    const validLevels = ['fatal', 'error', 'warn', 'info', 'debug', 'trace'] as const;
+
+    for (const level of validLevels) {
+      prodEnv();
+      process.env.LOG_LEVEL = level;
+      vi.resetModules();
+
+      const { ENV } = await import('@infra/config/env.config.js');
+      expect(ENV.LOG_LEVEL).toBe(level);
+      vi.resetModules();
+    }
+  });
+
+  it('throws when LOG_LEVEL has an invalid value', async () => {
+    prodEnv();
+    process.env.LOG_LEVEL = 'verbose';
+
+    await expect(import('@infra/config/env.config.js')).rejects.toThrow(
+      'Missing required environment variable: LOG_LEVEL',
+    );
+  });
 });
