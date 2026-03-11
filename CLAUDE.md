@@ -6,6 +6,7 @@
 - **Do not invent file structures, layers, or patterns not described here.**
 - **Do not create a file without its corresponding test.**
 - **Do not skip steps in the Module Creation Playbook.**
+- **Every domain module MUST have an entity. No exceptions. Repository ports receive entities, not raw data objects.**
 - Task is complete only when: code compiles, `yarn test` passes, `yarn test:coverage` shows no uncovered branches.
 
 ## Stack
