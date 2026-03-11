@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/compare/v1.0.0...v1.0.1) (2026-03-11)
+
+
+### Bug Fixes
+
+* calude md ([12ffaac](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/12ffaac7911e29b04509462e7b0e2a6f9859112f))
+* ci/cd build ([ecea3a4](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/ecea3a47672001479e77c7c175f927f2c787d418))
+
 ## 1.0.0 (2026-03-10)
 
 
