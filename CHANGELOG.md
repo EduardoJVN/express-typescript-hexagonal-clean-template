@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/compare/v1.0.1...v1.0.2) (2026-03-15)
+
+
+### Bug Fixes
+
+* deploy ci/cd ([9cb167e](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/commit/9cb167e067efb9cf03c194b37cee2b6d47e5b6c8))
+
 ## [1.0.1](https://github.com/EduardoJVN/express-typescript-hexagonal-clean-template/compare/v1.0.0...v1.0.1) (2026-03-11)
 
 
