@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+    branches-ignore: [main]
+
+jobs:
+  quality-check:
+    name: 🔍 Calidad (Lint & Test)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'yarn'
+      - name: 📦 Install
+        run: yarn install --frozen-lockfile
+      - name: 🔍 Lint & Test
+        run: |
+          yarn lint
+          yarn test
+
+  build-check:
+    name: 🏗️ Build Verification
+    needs: quality-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'yarn'
+      - name: 📦 Install
+        run: yarn install --frozen-lockfile
+      - name: 🏗️ Build
+        run: yarn build
